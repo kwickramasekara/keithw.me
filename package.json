@@ -1,0 +1,25 @@
+{
+  "name": "keithw.me",
+  "version": "1.0.0",
+  "description": "Landing page of Keith Wickramasekara",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwickramasekara/keithw.me.git"
+  },
+  "author": "Keith Wickramasekara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwickramasekara/keithw.me/issues"
+  },
+  "homepage": "https://github.com/kwickramasekara/keithw.me#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@prettier/plugin-pug": "^1.16.6",
+    "prettier": "^2.4.0"
+  }
+}
