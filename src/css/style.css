@@ -24,10 +24,20 @@ body {
 }
 
 #container {
-  display: block;
   margin: 0 auto;
   float: none;
   max-width: var(--maxwidth);
+}
+
+#profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: var(--base-spacing);
+  border: 1px solid var(--gray-5);
+  margin: 0 auto calc(var(--base-spacing) * 4) auto;
+  float: none;
+  display: block;
 }
 
 #title {
@@ -51,23 +61,30 @@ body {
   text-align: center;
 }
 
-#profile-image {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  padding: var(--base-spacing);
-  border: 1px solid var(--gray-5);
-  margin: 0 auto calc(var(--base-spacing) * 4) auto;
-  float: none;
-  display: block;
-}
-
 #description {
-  color: var(--gray-7);
+  margin: 0 0 calc(var(--base-spacing) * 8) 0;
 }
 
 #description p {
+  color: var(--gray-7);
   line-height: calc(var(--base-spacing) * 8);
+}
+
+#divider {
+  border: 0;
+  border-top: 1px solid var(--gray-4);
+  margin: 0 0 calc(var(--base-spacing) * 6) 0;
+}
+
+#links {
+  padding: 0;
+  margin: 0 0 calc(var(--base-spacing) * 8) 0;
+}
+
+#links li {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
 }
 
 .link {
