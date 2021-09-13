@@ -1,21 +1,24 @@
 :root {
-  --base-spacing: 4px;
-  --gray-0: #fff;
-  --gray-1: #f8f9fa;
-  --gray-2: #e9ecef;
-  --gray-3: #dee2e6;
-  --gray-4: #ced4da;
-  --gray-5: #adb5bd;
-  --gray-6: #6c757d;
-  --gray-7: #495057;
-  --gray-8: #343a40;
-  --gray-9: #212529;
-  --gray-10: #000;
+  --grayscale-0: #fff;
+  --grayscale-1: #f8f9fa;
+  --grayscale-2: #e9ecef;
+  --grayscale-3: #dee2e6;
+  --grayscale-4: #ced4da;
+  --grayscale-5: #adb5bd;
+  --grayscale-6: #6c757d;
+  --grayscale-7: #495057;
+  --grayscale-8: #343a40;
+  --grayscale-9: #212529;
+  --grayscale-10: #000;
   --blue: #0076ff;
+  --base-spacing: 4px;
 }
 
-#container {
-  --maxwidth: 100%;
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -24,9 +27,8 @@ body {
 }
 
 #container {
-  margin: 0 auto;
-  float: none;
-  max-width: var(--maxwidth);
+  max-width: 100%;
+  padding: calc(var(--base-spacing) * 5);
 }
 
 #profile-image {
@@ -34,7 +36,7 @@ body {
   height: 160px;
   border-radius: 50%;
   padding: var(--base-spacing);
-  border: 1px solid var(--gray-5);
+  border: 1px solid var(--grayscale-5);
   margin: 0 auto calc(var(--base-spacing) * 4) auto;
   float: none;
   display: block;
@@ -42,7 +44,7 @@ body {
 
 #title {
   font-size: 36px;
-  color: var(--gray-8);
+  color: var(--grayscale-8);
   margin: 0 0 calc(var(--base-spacing) * 2) 0;
   line-height: calc(var(--base-spacing) * 10);
   -webkit-font-smoothing: antialiased;
@@ -52,7 +54,7 @@ body {
 #subtitle {
   font-weight: normal;
   font-size: 20px;
-  color: var(--gray-7);
+  color: var(--grayscale-7);
   margin: 0 0 calc(var(--base-spacing) * 8) 0;
 }
 
@@ -66,13 +68,13 @@ body {
 }
 
 #description p {
-  color: var(--gray-7);
+  color: var(--grayscale-7);
   line-height: calc(var(--base-spacing) * 8);
 }
 
 #divider {
   border: 0;
-  border-top: 1px solid var(--gray-4);
+  border-top: 1px solid var(--grayscale-4);
   margin: 0 0 calc(var(--base-spacing) * 6) 0;
 }
 
@@ -94,7 +96,13 @@ body {
 
 /* Desktop */
 @media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #container {
-    --maxwidth: 625px;
+    max-width: 625px;
   }
 }
