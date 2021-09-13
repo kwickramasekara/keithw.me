@@ -11,6 +11,12 @@
   --grayscale-9: #212529;
   --grayscale-10: #000;
   --blue: #0076ff;
+  --bg-color: var(--grayscale-0);
+  --title-color: var(--grayscale-8);
+  --subtitle-color: var(--grayscale-7);
+  --description-color: var(--grayscale-7);
+  --border-color: var(--grayscale-4);
+  --link-color: var(--blue);
   --base-spacing: 4px;
 }
 
@@ -22,6 +28,7 @@ body {
 }
 
 body {
+  background-color: var(--bg-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -36,15 +43,15 @@ body {
   height: 160px;
   border-radius: 50%;
   padding: var(--base-spacing);
-  border: 1px solid var(--grayscale-5);
+  border: 1px solid var(--border-color);
   margin: 0 auto calc(var(--base-spacing) * 4) auto;
   float: none;
   display: block;
 }
 
 #title {
+  color: var(--title-color);
   font-size: 36px;
-  color: var(--grayscale-8);
   margin: 0 0 calc(var(--base-spacing) * 2) 0;
   line-height: calc(var(--base-spacing) * 10);
   -webkit-font-smoothing: antialiased;
@@ -52,9 +59,9 @@ body {
 }
 
 #subtitle {
+  color: var(--subtitle-color);
   font-weight: normal;
   font-size: 20px;
-  color: var(--grayscale-7);
   margin: 0 0 calc(var(--base-spacing) * 8) 0;
 }
 
@@ -68,13 +75,13 @@ body {
 }
 
 #description p {
-  color: var(--grayscale-7);
+  color: var(--description-color);
   line-height: calc(var(--base-spacing) * 8);
 }
 
 #divider {
   border: 0;
-  border-top: 1px solid var(--grayscale-4);
+  border-top: 1px solid var(--border-color);
   margin: 0 0 calc(var(--base-spacing) * 6) 0;
 }
 
@@ -90,7 +97,7 @@ body {
 }
 
 .link {
-  color: var(--blue);
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -104,5 +111,17 @@ body {
 
   #container {
     max-width: 625px;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--grayscale-10);
+    --title-color: var(--grayscale-3);
+    --subtitle-color: var(--grayscale-5);
+    --description-color: var(--grayscale-5);
+    --border-color: var(--grayscale-8);
+    --link-color: var(--blue);
   }
 }
