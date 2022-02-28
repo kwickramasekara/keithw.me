@@ -28,3 +28,13 @@ block content
         a.link(href="https://www.linkedin.com/in/kwickramasekara") LinkedIn
       li
         a.link(href="https://twitter.com/keith_m_w") Twitter
+
+block foot
+  script.
+    // track link clicks
+    var links = document.getElementsByClassName('link');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function (e) {
+        panelbear('track', 'Opened ' + e.target.href);
+      });
+    }
