@@ -35,6 +35,6 @@ block foot
     var links = document.getElementsByClassName('link');
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', function (e) {
-        panelbear('track', 'Opened ' + e.target.href);
+        panelbear('track', 'open.' + e.target.outerText.toLowerCase());
       });
     }
