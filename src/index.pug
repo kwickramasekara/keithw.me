@@ -11,7 +11,7 @@ block content
     h2#subtitle Software Engineer &amp; Photographer
 
     #description
-      p Hi, I&apos;m a Dallas, Texas based software engineer graduated from University of North Texas. Currently working in FinTech focused on building beautiful, efficient and functional web experiences. I also love to travel and document the scenic beauty of this amazing planet in my spare time.
+      p Hi, I&apos;m a Dallas, Texas based software engineer graduated from University of North Texas. Currently working on building beautiful, efficient and functional web experiences. I also love to travel and document the scenic beauty of this amazing planet in my spare time.
 
       p Click the links below to see some of my work and feel free to contact me via any of the social media channels.
 
@@ -28,13 +28,3 @@ block content
         a.link(href="https://www.linkedin.com/in/kwickramasekara") LinkedIn
       li
         a.link(href="https://twitter.com/keith_m_w") Twitter
-
-block foot
-  script.
-    // track link clicks
-    var links = document.getElementsByClassName('link');
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener('click', function (e) {
-        panelbear('track', 'open.' + e.target.outerText.toLowerCase());
-      });
-    }
